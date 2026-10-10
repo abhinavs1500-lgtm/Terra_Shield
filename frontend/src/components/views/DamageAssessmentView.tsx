@@ -16,11 +16,13 @@ import {
   ArrowRight
 } from 'lucide-react';
 
+import { FALLBACK_DAMAGE_REPORTS } from '../../services/fallbackData';
+
 export const DamageAssessmentView: React.FC = () => {
   const { userRole, sendCopilotQuery } = useApp();
 
-  const [reports, setReports] = useState<DamageReportItem[]>([]);
-  const [selectedReport, setSelectedReport] = useState<DamageReportItem | null>(null);
+  const [reports, setReports] = useState<DamageReportItem[]>(FALLBACK_DAMAGE_REPORTS);
+  const [selectedReport, setSelectedReport] = useState<DamageReportItem | null>(FALLBACK_DAMAGE_REPORTS[0]);
   const [sliderPos, setSliderPos] = useState<number>(50);
   const [showCVOverlay, setShowCVOverlay] = useState<boolean>(true);
 

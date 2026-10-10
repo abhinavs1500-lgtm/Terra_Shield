@@ -106,6 +106,7 @@ export interface MultiHazardReport {
 export interface ScenarioParameters {
   scenario_id: string;
   name: string;
+  description?: string;
   hazard_type: string;
   rainfall_intensity_mm_hr: number;
   duration_hours: number;
@@ -131,6 +132,7 @@ export interface TimeStepResult {
 export interface SimulationRunResult {
   scenario_id: string;
   scenario_name: string;
+  name?: string;
   hazard_type: string;
   status: string;
   total_timesteps: number;
@@ -189,6 +191,12 @@ export interface DisruptionSimulationResponse {
   hospitals_at_risk: any[];
   alternative_detours: any[];
   recommended_reinforcements: string[];
+  primary_failures_count?: number;
+  cascading_failures_count?: number;
+  isolated_nodes_count?: number;
+  total_population_unserved?: number;
+  alternative_routes?: any[];
+  system_resilience_score?: number;
 }
 
 export interface DamageReportItem {
@@ -234,6 +242,9 @@ export interface ScheduledTask {
   cumulative_cost: number;
   cumulative_population_restored: number;
   why_prioritized: string;
+  assigned_crews?: number;
+  daily_cost?: number;
+  cumulative_restored_pop?: number;
 }
 
 export interface RecoveryPlanResponse {
@@ -249,6 +260,9 @@ export interface RecoveryPlanResponse {
   schedule: ScheduledTask[];
   unfunded_tasks: RecoveryTask[];
   pareto_tradeoffs: any[];
+  budget_cap_usd?: number;
+  crews_cap?: number;
+  peak_crews_utilized?: number;
 }
 
 export interface MLModelBenchmark {
@@ -262,6 +276,8 @@ export interface MLModelBenchmark {
   inference_latency_ms: number;
   training_sample_count: number;
   validation_strategy: string;
+  cross_val_folds?: number;
+  cross_val_score_mean?: number;
 }
 
 export interface MLResearchLabReport {
@@ -275,6 +291,9 @@ export interface MLResearchLabReport {
   missing_data_pct: number;
   spatial_autocorrelation_moran_i: number;
   recommendation: string;
+  timestamp?: string;
+  test_dataset_size?: number;
+  class_labels?: string[];
 }
 
 export interface SourceCitation {
@@ -293,4 +312,8 @@ export interface AssistantQueryResponse {
   confidence_score: number;
   data_freshness_warning?: string | null;
   is_hypothetical_context: boolean;
+  query?: string;
+  response_markdown?: string;
+  citations?: any[];
+  execution_time_ms?: number;
 }

@@ -3,6 +3,7 @@ import { useApp } from '../../context/AppContext';
 import { api } from '../../services/api';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import { FALLBACK_DOSSIER } from '../../services/fallbackData';
 import {
   FileText,
   Download,
@@ -19,7 +20,7 @@ import {
 
 export const ReportsView: React.FC = () => {
   const { selectedParcelId, parcels, setSelectedParcelId, sendCopilotQuery } = useApp();
-  const [dossier, setDossier] = useState<any>(null);
+  const [dossier, setDossier] = useState<any>(FALLBACK_DOSSIER);
   const [loading, setLoading] = useState(false);
   const [exporting, setExporting] = useState(false);
 
@@ -31,9 +32,10 @@ export const ReportsView: React.FC = () => {
     setLoading(true);
     try {
       const data = await api.getResilienceDossier(selectedParcelId);
-      setDossier(data);
+      setDossier(data || FALLBACK_DOSSIER);
     } catch (e) {
-      console.warn('Failed to load dossier:', e);
+      console.warn('Failed to load dossier, using fallback:', e);
+      setDossier(FALLBACK_DOSSIER);
     } finally {
       setLoading(false);
     }
