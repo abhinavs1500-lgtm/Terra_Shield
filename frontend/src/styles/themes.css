@@ -1,0 +1,329 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TerraShield AI — 5 Complete Design Themes & Holographic Styling System */
+
+/* =====================================================================
+   GLOBAL DEFAULTS (HOLOCORE — Electric Cyan/Violet Deep Space)
+   ===================================================================== */
+:root {
+  --ts-bg: #020617;
+  --ts-card: rgba(15, 23, 42, 0.85);
+  --ts-card-border: rgba(0, 240, 255, 0.22);
+  --ts-card-hover: rgba(0, 240, 255, 0.5);
+  --ts-sidebar: rgba(8, 13, 28, 0.96);
+  --ts-header: rgba(8, 13, 28, 0.98);
+  --ts-primary: #00f0ff;
+  --ts-primary-glow: rgba(0, 240, 255, 0.45);
+  --ts-secondary: #a855f7;
+  --ts-accent: #00ff9d;
+  --ts-text: #f1f5f9;
+  --ts-muted: #8892a4;
+  --ts-danger: #f43f5e;
+  --ts-warning: #fbbf24;
+  --ts-success: #10b981;
+  --ts-info: #38bdf8;
+  --ts-glass-blur: blur(20px);
+  --ts-grid-color: rgba(0, 240, 255, 0.04);
+  --ts-body-font: 'Inter', system-ui, -apple-system, sans-serif;
+  --ts-mono-font: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+/* =====================================================================
+   THEME A: HOLOCORE — Deep Black · Electric Cyan · Violet · Holographic
+   ===================================================================== */
+[data-theme="holocore"] {
+  --ts-bg: #020617;
+  --ts-card: rgba(15, 23, 42, 0.85);
+  --ts-card-border: rgba(0, 240, 255, 0.22);
+  --ts-card-hover: rgba(0, 240, 255, 0.55);
+  --ts-sidebar: rgba(8, 13, 28, 0.96);
+  --ts-header: rgba(8, 13, 28, 0.98);
+  --ts-primary: #00f0ff;
+  --ts-primary-glow: rgba(0, 240, 255, 0.5);
+  --ts-secondary: #a855f7;
+  --ts-accent: #00ff9d;
+  --ts-text: #f1f5f9;
+  --ts-muted: #8892a4;
+  --ts-danger: #f43f5e;
+  --ts-warning: #fbbf24;
+  --ts-success: #10b981;
+  --ts-info: #38bdf8;
+  --ts-grid-color: rgba(0, 240, 255, 0.04);
+}
+
+/* =====================================================================
+   THEME B: ORBITAL COMMAND — Dark Navy · Amber · Mission Control Radar
+   ===================================================================== */
+[data-theme="orbital-command"] {
+  --ts-bg: #060d1e;
+  --ts-card: rgba(20, 30, 60, 0.9);
+  --ts-card-border: rgba(245, 158, 11, 0.3);
+  --ts-card-hover: rgba(245, 158, 11, 0.6);
+  --ts-sidebar: rgba(12, 18, 40, 0.97);
+  --ts-header: rgba(12, 18, 40, 0.99);
+  --ts-primary: #f59e0b;
+  --ts-primary-glow: rgba(245, 158, 11, 0.4);
+  --ts-secondary: #3b82f6;
+  --ts-accent: #06b6d4;
+  --ts-text: #f0f4f8;
+  --ts-muted: #7a8aa0;
+  --ts-danger: #ef4444;
+  --ts-warning: #f59e0b;
+  --ts-success: #22c55e;
+  --ts-info: #06b6d4;
+  --ts-grid-color: rgba(245, 158, 11, 0.03);
+}
+
+/* =====================================================================
+   THEME C: SATELLITE INTELLIGENCE — Dark Teal · Emerald · Earth GIS
+   ===================================================================== */
+[data-theme="satellite-intel"] {
+  --ts-bg: #0a1510;
+  --ts-card: rgba(16, 28, 22, 0.92);
+  --ts-card-border: rgba(52, 211, 153, 0.28);
+  --ts-card-hover: rgba(52, 211, 153, 0.6);
+  --ts-sidebar: rgba(12, 20, 16, 0.97);
+  --ts-header: rgba(12, 20, 16, 0.99);
+  --ts-primary: #10b981;
+  --ts-primary-glow: rgba(16, 185, 129, 0.4);
+  --ts-secondary: #0284c7;
+  --ts-accent: #eab308;
+  --ts-text: #ecfdf5;
+  --ts-muted: #6b7d74;
+  --ts-danger: #f87171;
+  --ts-warning: #fbbf24;
+  --ts-success: #34d399;
+  --ts-info: #38bdf8;
+  --ts-grid-color: rgba(52, 211, 153, 0.04);
+}
+
+/* =====================================================================
+   THEME D: NEO CYBER — Pure Black · Neon Green · Vivid Magenta Glitch
+   ===================================================================== */
+[data-theme="neo-cyber"] {
+  --ts-bg: #07070a;
+  --ts-card: rgba(18, 18, 22, 0.93);
+  --ts-card-border: rgba(0, 255, 157, 0.28);
+  --ts-card-hover: rgba(0, 255, 157, 0.65);
+  --ts-sidebar: rgba(12, 12, 16, 0.97);
+  --ts-header: rgba(12, 12, 16, 0.99);
+  --ts-primary: #00ff9d;
+  --ts-primary-glow: rgba(0, 255, 157, 0.45);
+  --ts-secondary: #ff2d87;
+  --ts-accent: #00e5ff;
+  --ts-text: #f7f8fa;
+  --ts-muted: #808090;
+  --ts-danger: #ff2052;
+  --ts-warning: #facc15;
+  --ts-success: #00ff9d;
+  --ts-info: #00e5ff;
+  --ts-grid-color: rgba(0, 255, 157, 0.04);
+}
+
+/* =====================================================================
+   THEME E: CLARITY ANALYTICS — Clean White · Professional Blue/Teal
+   ===================================================================== */
+[data-theme="clarity-analytics"] {
+  --ts-bg: #f4f7fa;
+  --ts-card: rgba(255, 255, 255, 0.98);
+  --ts-card-border: rgba(148, 163, 184, 0.45);
+  --ts-card-hover: rgba(2, 132, 199, 0.4);
+  --ts-sidebar: rgba(241, 245, 249, 0.99);
+  --ts-header: rgba(255, 255, 255, 0.99);
+  --ts-primary: #0284c7;
+  --ts-primary-glow: rgba(2, 132, 199, 0.2);
+  --ts-secondary: #4f46e5;
+  --ts-accent: #0d9488;
+  --ts-text: #0f172a;
+  --ts-muted: #64748b;
+  --ts-danger: #e11d48;
+  --ts-warning: #d97706;
+  --ts-success: #059669;
+  --ts-info: #0369a1;
+  --ts-glass-blur: blur(8px);
+  --ts-grid-color: rgba(0, 0, 0, 0.03);
+}
+
+/* =====================================================================
+   CLARITY: Force dark text on light background for all panels
+   ===================================================================== */
+[data-theme="clarity-analytics"] .glass-panel,
+[data-theme="clarity-analytics"] .glass-panel-glow {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* =====================================================================
+   BASE STYLES & BODY
+   ===================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--ts-bg);
+  color: var(--ts-text);
+  font-family: var(--ts-body-font);
+  transition: background-color 0.3s ease, color 0.2s ease;
+}
+
+/* =====================================================================
+   GLASSMORPHIC PANEL COMPONENTS
+   ===================================================================== */
+.glass-panel {
+  background: var(--ts-card);
+  backdrop-filter: var(--ts-glass-blur);
+  -webkit-backdrop-filter: var(--ts-glass-blur);
+  border: 1px solid var(--ts-card-border);
+  transition: border-color 0.2s ease, box-shadow 0.25s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--ts-card-hover);
+}
+
+.glass-panel-glow {
+  background: var(--ts-card);
+  backdrop-filter: var(--ts-glass-blur);
+  -webkit-backdrop-filter: var(--ts-glass-blur);
+  border: 1px solid var(--ts-card-border);
+  box-shadow: 0 0 30px -8px var(--ts-primary-glow), 0 4px 20px -4px rgba(0,0,0,0.3);
+}
+
+.glass-panel-glow:hover {
+  box-shadow: 0 0 40px -6px var(--ts-primary-glow), 0 8px 24px -4px rgba(0,0,0,0.35);
+}
+
+/* =====================================================================
+   HOLOGRAPHIC GRID BACKGROUND
+   ===================================================================== */
+.holo-grid {
+  background-size: 32px 32px;
+  background-image:
+    linear-gradient(to right, var(--ts-grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--ts-grid-color) 1px, transparent 1px);
+}
+
+/* =====================================================================
+   ANIMATED SCANNING EFFECTS
+   ===================================================================== */
+@keyframes radar-sweep {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes scan-line {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 0.6; }
+  90%  { opacity: 0.6; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+.animate-scan {
+  animation: scan-line 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, var(--ts-primary-glow), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+/* =====================================================================
+   SKELETON LOADER
+   ===================================================================== */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.7; }
+}
+
+.skeleton {
+  background: var(--ts-card-border);
+  border-radius: 6px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+/* =====================================================================
+   CUSTOM SCROLLBAR
+   ===================================================================== */
+::-webkit-scrollbar         { width: 5px; height: 5px; }
+::-webkit-scrollbar-track   { background: transparent; }
+::-webkit-scrollbar-thumb   { background: var(--ts-card-border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ts-primary); }
+
+/* =====================================================================
+   RANGE INPUT STYLING
+   ===================================================================== */
+input[type="range"] {
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ts-primary);
+  border: 2px solid var(--ts-bg);
+  box-shadow: 0 0 6px var(--ts-primary-glow);
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: var(--ts-card-border);
+  border-radius: 4px;
+}
+
+/* =====================================================================
+   FOCUS / KEYBOARD ACCESSIBILITY
+   ===================================================================== */
+:focus-visible {
+  outline: 2px solid var(--ts-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* =====================================================================
+   REDUCED MOTION
+   ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =====================================================================
+   NEO CYBER: Glitch text effect for headings
+   ===================================================================== */
+[data-theme="neo-cyber"] h1 {
+  text-shadow: 2px 0 var(--ts-secondary), -1px 0 var(--ts-primary);
+}
+
+/* =====================================================================
+   ORBITAL COMMAND: Subtle scanline overlay
+   ===================================================================== */
+[data-theme="orbital-command"] .glass-panel-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(245, 158, 11, 0.02) 3px,
+    rgba(245, 158, 11, 0.02) 4px
+  );
+  pointer-events: none;
+  border-radius: inherit;
+}
