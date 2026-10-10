@@ -1,0 +1,22 @@
+{
+  "name": "terrashield-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TerraShield AI - AI-Powered Geospatial Intelligence, Disaster Simulation & Holographic Digital Twin",
+  "scripts": {
+    "build": "node build.js",
+    "start": "python start_app.py",
+    "test": "python test_backend.py"
+  },
+  "keywords": [
+    "geospatial",
+    "disaster-resilience",
+    "digital-twin",
+    "simulation",
+    "ai",
+    "leaflet",
+    "threejs"
+  ],
+  "author": "TerraShield AI Team",
+  "license": "MIT"
+}
